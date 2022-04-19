@@ -1,15 +1,15 @@
 import React from "react";
 import '../Main.scss';
-import {Container, Row, Col, Card, Button} from "react-bootstrap";
-import {Star, StarFill, StarHalf, SuitHeartFill} from "react-bootstrap-icons";
+import {Container, Row, Col, Card} from "react-bootstrap";
+import {StarFill, StarHalf, SuitHeartFill} from "react-bootstrap-icons";
 
 
 export function Product (){
     return (
-    <Container fluid className="m-3">
+    <Container>
         <Row>
-           <Col className="my-5">
-                <Card border="primary" className="card">
+           <Col className="mt-5 p-4" >
+                <Card border="primary"  className="card-container">
                   <Card.Img variant="top" src="bird.jpg" />
                   <Card.Body className="card-body m-2 px-3 py-2">
                       <div className="">
@@ -25,8 +25,10 @@ export function Product (){
                             <StarHalf className="me-2" size={22}/>
                             <Card.Text as="small" className="mb-3 text-muted">504</Card.Text>
                         </div>
+                      <div>
                         <Card.Text className="text-end" as="h6"><del>$54.99</del></Card.Text>
-                      <Card.Text as="h1" className=" text-end text-primary">$ 49.99</Card.Text>
+                        <Card.Text as="h1" className=" text-end text-primary">$ 49.99</Card.Text>
+                      </div>
                   </Card.Body>
                 </Card>          
            </Col>
