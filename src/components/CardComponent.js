@@ -8,26 +8,25 @@ export function Product (){
     return (
     <Container>
         <Row>
-           <Col className="mt-5 p-4" >
-                <Card border="primary"  className="card-container">
-                  <Card.Img variant="top" src="bird.jpg" />
-                  <Card.Body className="card-body m-2 px-3 py-2">
-                      <div className="">
-                        <div className="text-end"><SuitHeartFill className=" heart-icon text-danger" size={40} /></div>
-                        <Card.Title as="h1" className="text-primary text-start">Pastel Bird</Card.Title>
-                        <Card.Subtitle as="h6" className="text-start text-muted" >by Jennifer Miranda</Card.Subtitle>
+           <Col className="mt-5 card-container" >
+                <Card className="border-0 rounded-5 shadow card">
+                  <Card.Img variant="top" src="bird.jpg"/>
+                  <Card.Body className="card-body mt-2 me-3 px-3 py-2">
+                  <div className="text-end "><SuitHeartFill className=" heart-icon text-danger" size={30} /></div>
+                    <div className="text-center">
+                        <Card.Title as="h4" className="text-primary text-uppercase text-bold mt-2">Pastel Bird</Card.Title>
+                        <Card.Subtitle as="h6" className="text-muted" >by Jennifer Miranda</Card.Subtitle>
                       </div>
-                      <div className="star-icons text-warning mt-2 ms-2">
-                            <StarFill className="me-2" size={22}/>
-                            <StarFill className="me-2" size={22}/>
-                            <StarFill className="me-2" size={22}/>
-                            <StarFill className="me-2" size={22}/>
-                            <StarHalf className="me-2" size={22}/>
-                            <Card.Text as="small" className="mb-3 text-muted">504</Card.Text>
+                      <div className="star-icons text-warning text-center my-2">
+                            <StarFill className="mx-1" size={22}/>
+                            <StarFill className="mx-1" size={22}/>
+                            <StarFill className="mx-1" size={22}/>
+                            <StarFill className="mx-1" size={22}/>
+                            <StarHalf className="mx-1" size={22}/>
+                            <Card.Text as="small" className="mb-3 ms-2 text-muted text-bold">4.5</Card.Text>
                         </div>
                       <div>
-                        <Card.Text className="text-end" as="h6"><del>$54.99</del></Card.Text>
-                        <Card.Text as="h1" className=" text-end text-primary">$ 49.99</Card.Text>
+                        <Card.Text as="h1" className=" text-center text-primary">$ 49.99</Card.Text>
                       </div>
                   </Card.Body>
                 </Card>          

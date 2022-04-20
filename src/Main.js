@@ -6,10 +6,10 @@ import {Product} from './components/CardComponent';
 
 function Main() {
  return (
-   <>
-   <Header className="mb-2 pb-2" />
-  <Product />
-   </>
+   <body>
+    <Header className="mb-2 pb-2" />
+    <Product />
+  </body>
   );
 }
 
