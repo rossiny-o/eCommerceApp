@@ -1,51 +1,32 @@
 // Bootstrap source Sass files import
 
+@import url("https://www.dafont.com/pricedown.font");
 
-$primary: red ;
-
-body{
-    background-color: black;
+h3{
+    font-family:"pricedown";
 }
-
 .searchbar{
-    width: 20rem;
-}
-
-h1{
-    font-weight: bold;
-}
-.navbar-style{
-  color: white;
-}
-
-.card-container{
-  border-radius: 2em;
-  outline: none;
-  border: none;
+    width: 35rem;
 }
 
 .card{ 
    width: 25em;
-   border: none;
-   outline: none;
-   height:fit-content;
-   padding: .8em;
-   border-radius: 2em;
-   box-shadow: 2em rgba(96, 93, 93, 0.273);
 }
 
 .card:hover{
     transform: translateY(-5px);
-    transition: transformr .4s;
+    transition: transform .4s;
     
 }
 
-.card-body{
-    border: none;
-    outline: none;
+.heart-icon{
+    display: float;
+    padding-left: 1em;
 }
 
-.heart-icon{
-    display: relative;
-    justify-self: right ;
+.heart-icon:hover{
+    transform: translateY(-10px);
+    transition: transform .2s;
 }
+
+

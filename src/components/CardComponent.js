@@ -1,34 +1,46 @@
 import React from "react";
 import '../Main.scss';
 import {Container, Row, Col, Card} from "react-bootstrap";
-import {StarFill, StarHalf, SuitHeartFill} from "react-bootstrap-icons";
+import {Star, StarFill, StarHalf, SuitHeartFill} from "react-bootstrap-icons";
+
 
 
 export function Product (){
     return (
     <Container>
+        
+         {/* 1st row */}
+
         <Row>
-           <Col className="mt-5 card-container" >
-                <Card className="border-0 rounded-5 shadow card">
-                  <Card.Img variant="top" src="bird.jpg"/>
-                  <Card.Body className="card-body mt-2 me-3 px-3 py-2">
-                  <div className="text-end "><SuitHeartFill className=" heart-icon text-danger" size={30} /></div>
-                    <div className="text-center">
-                        <Card.Title as="h4" className="text-primary text-uppercase text-bold mt-2">Pastel Bird</Card.Title>
-                        <Card.Subtitle as="h6" className="text-muted" >by Jennifer Miranda</Card.Subtitle>
-                      </div>
-                      <div className="star-icons text-warning text-center my-2">
-                            <StarFill className="mx-1" size={22}/>
-                            <StarFill className="mx-1" size={22}/>
-                            <StarFill className="mx-1" size={22}/>
-                            <StarFill className="mx-1" size={22}/>
-                            <StarHalf className="mx-1" size={22}/>
-                            <Card.Text as="small" className="mb-3 ms-2 text-muted text-bold">4.5</Card.Text>
+           <Col className="mt-5 justify-content-center" >
+                <Card className=" mb-1 p-5 pb-1 border-0 border-bottom rounded-5 shadow" >
+
+                    {/* card starts here */}
+
+                  <Card.Img className="p-3 mx-auto img-thumbnail bg-warning border-0 border-bottom rounded rounded-3  shadow" variant="top" src="bird.jpg" alt="Bird Drawing"/>
+
+                  <Card.Body className="card-body mt-2 me-3 px-3 py-4">
+
+                        {/* <div className=" heart-icon float-end"><SuitHeartFill className="text-danger" size={30} /></div> */}
+
+                        <div className="text-center">
+                            <Card.Title as="h3" className="text-primary text-uppercase font-monaco fw-bolder mt-3 ">Pastel Bird</Card.Title>
+                            <Card.Subtitle as="h5" className="text-muted fst-italic" >by Jennifer Miranda</Card.Subtitle>
                         </div>
-                      <div>
-                        <Card.Text as="h1" className=" text-center text-primary">$ 49.99</Card.Text>
-                      </div>
+
+                        <div className="star-icons text-warning text-center my-2">
+                            <StarFill className="mx-1" size={30}/>
+                            <StarFill className="mx-1" size={30}/>
+                            <StarFill className="mx-1" size={30}/>
+                            <StarHalf className="mx-1" size={30}/>
+                            <Star className="mx-1" size={30}/>
+                        </div>
+
+                        <Card.Text as="h2" className=" fst-italic font-monaco text-center text-primary pb-3">$ 49.99</Card.Text>
+
                   </Card.Body>
+
+                  {/* card ends here */}
                 </Card>          
            </Col>
 
@@ -101,6 +113,8 @@ export function Product (){
                 </Card>          
            </Col>
         </Row>
+
+             {/* 2nd row */}
 
         <Row>
             <Col className="my-5">
@@ -196,6 +210,8 @@ export function Product (){
            </Col>
         </Row>
 
+            {/* 3rd row */}
+
         <Row>
             <Col className="my-5">
                 <Card border="primary" className="card">
@@ -289,140 +305,7 @@ export function Product (){
                 </Card>          
            </Col>
         </Row>
-      {/* <Row>
-            <h3 className="py-4">Items</h3>
-       <Col id='first-row-card' className="d-flex">
-       <Card className="p-2" bg='success'>
-            <Card.Img src="bird.jpg" variant=""/>
-       </Card>
-       
-
-        <Card className='card-style'>
-            <Card.Img variant="top" src="birdlog.jpg"  />
-            <Card.Body>
-                <Card.Title>Bird</Card.Title>
-                <Card.Text size="lg">
-               $174.99
-                </Card.Text>
-            </Card.Body>
-        </Card>
-
-        <Card className='card-style'>
-            <Card.Img variant="top" src="bigcat.jpg" />
-            <Card.Body>
-                <Card.Title>Bird</Card.Title>
-                <Card.Text size="lg">
-               $174.99
-                </Card.Text>
-            </Card.Body>
-        </Card>
-       </Col>
-        </Row>
-
-        <Row>
-        <Col id='second-row-card' className="d-flex">
-            <Card className='card-style'>
-            <Card.Img variant="top" src="elephanthorns.jpg" />
-            <Card.Body>
-                <Card.Title>Bird</Card.Title>
-                <Card.Text size="xl">
-               $174.99
-                </Card.Text>
-            </Card.Body>
-            </Card>
-
-            <Card className='card-style'>
-            <Card.Img variant="top" src="elephlower.jpg" />
-            <Card.Body>
-                <Card.Title>Bird</Card.Title>
-                <Card.Text size="lg">
-               $174.99
-                </Card.Text>
-            </Card.Body>
-            </Card>
-
-            <Card className='card-style'>
-            <Card.Img variant="top" src="facialfeatures.jpg" />
-            <Card.Body>
-                <Card.Title>Bird</Card.Title>
-                <Card.Text size="lg">
-               $174.99
-                </Card.Text>
-            </Card.Body>
-        </Card>
-        
-        </Col>
-        </Row>
-
-        <Row>
-        <Col id='second-row-card' className="d-flex">
-            <Card className='card-style'>
-            <Card.Img variant="top" src="flowerfox.jpg" />
-            <Card.Body>
-                <Card.Title>Bird</Card.Title>
-                <Card.Text size="xl">
-               $174.99
-                </Card.Text>
-            </Card.Body>
-            </Card>
-
-            <Card className='card-style'>
-            <Card.Img variant="top" src="hamster.jpg" />
-            <Card.Body>
-                <Card.Title>Bird</Card.Title>
-                <Card.Text size="lg">
-               $174.99
-                </Card.Text>
-            </Card.Body>
-            </Card>
-
-            <Card className='card-style'>
-            <Card.Img variant="top" src="sheepinwolfclothing.jpg" />
-            <Card.Body>
-                <Card.Title>Bird</Card.Title>
-                <Card.Text size="lg">
-               $174.99
-                </Card.Text>
-            </Card.Body>
-        </Card>
-        
-        </Col>
-        </Row>
-
-        <Row>
-        <Col id='second-row-card' className="d-flex">
-            <Card className='card-style'>
-            <Card.Img variant="top" src="thinking.jpg" />
-            <Card.Body>
-                <Card.Title>Bird</Card.Title>
-                <Card.Text size="xl">
-               $174.99
-                </Card.Text>
-            </Card.Body>
-            </Card>
-
-            <Card className='card-style'>
-            <Card.Img variant="top" src="vforvendetta.jpg" />
-            <Card.Body>
-                <Card.Title>Bird</Card.Title>
-                <Card.Text size="lg">
-               $174.99
-                </Card.Text>
-            </Card.Body>
-            </Card>
-
-            <Card className='card-style'>
-            <Card.Img variant="top" src="horse.jpg" />
-            <Card.Body>
-                <Card.Title>Bird</Card.Title>
-                <Card.Text size="lg">
-               $174.99
-                </Card.Text>
-            </Card.Body>
-        </Card>
-        
-        </Col>
-        </Row> */}
+     
     </Container>
     );
 }
