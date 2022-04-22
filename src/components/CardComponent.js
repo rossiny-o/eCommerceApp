@@ -1,21 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import '../Main.scss';
-import {Container, Row, Col, Card} from "react-bootstrap";
+import { Header } from "./HeaderComponent";
+import {Container, Row, Col, Card, Modal, Button} from "react-bootstrap";
 import {Star, StarFill, StarHalf, SuitHeartFill} from "react-bootstrap-icons";
 
 
 
 export function Product (){
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    
+
     return (
-    <Container>
+    <Container className="m-4 p-4" fluid>
         
          {/* 1st row */}
 
         <Row>
-           <Col className="mt-5 justify-content-center" >
-                <Card className=" mb-1 p-5 pb-1 border-0 border-bottom rounded-5 shadow" >
+           <Col className="mt-5 mx-auto" sm={4}>
 
-                    {/* card starts here */}
+                {/* card 1 starts here */}
+
+                    <Card className=" mb-1 p-5 pb-1 border-0 border-bottom rounded-5 shadow" onClick={handleShow} >
 
                   <Card.Img className="p-3 mx-auto img-thumbnail bg-warning border-0 border-bottom rounded rounded-3  shadow" variant="top" src="bird.jpg" alt="Bird Drawing"/>
 
@@ -40,9 +49,68 @@ export function Product (){
 
                   </Card.Body>
 
-                  {/* card ends here */}
-                </Card>          
-           </Col>
+                    </Card> 
+
+                {/* card 1 ends here */}
+
+                {/* modal 1 starts here */}
+
+                <Modal show={show} fullscreen onHide={handleClose}>
+            
+                    
+
+                        <Container className="m-5 p-5">
+
+                            <Modal.Header fluid><Header /></Modal.Header>
+
+                            <Row className="d-flex mx-auto p-5">
+                            
+                                <Col className="p-2">
+
+                                    <img className=" mx-auto img-thumbnail bg-warning border-0 border-bottom rounded rounded-3  shadow" src="bird.jpg" alt="Bird Drawing" />
+                                    
+                                </Col>
+
+        
+
+                                <Col bg="secondary" gap={2} className="pe-3">
+                                    <h1 className="text-primary text-uppercase text-start font-monaco display-2">Pastel Bird</h1>
+
+                                    <div className="star-icons text-warning text-start my-2">
+                                        <StarFill className="mx-1" size={40}/>
+                                        <StarFill className="mx-1" size={40}/>
+                                        <StarFill className="mx-1" size={40}/>
+                                        <StarHalf className="mx-1" size={40}/>
+                                        <Star className="mx-1" size={40}/>
+                                    </div>
+
+                                    <h5 className="text-muted fst-italic text-start">by Jennifer Miranda</h5>
+                                    <h4 className="fs-4 text-start">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+                                    </h4>
+
+                                    <div className="py-2">
+                                    <h1 className=" d-flex fst-italic display-5 font-monaco text-primary text-start float-start">$ 49.99</h1>
+
+                                    <label className="d-flex float-end ">
+                                        <h5 className="pe-3" >Qty: </h5>
+                                     <input width={10} className="fs-3 text-start border-0"                                 type="number"></input>
+                                    </label>
+                                    </div>
+
+                                    <div className="pt-3 d-inline-flex float-start">
+                                    <Button pill className="mx-3 p-4 text-uppercase" size="lg" variant="warning">ADD TO CART</Button>
+                                    <Button pill className="mx-3 p-4 text-uppercase" size="lg" variant="secondary" onClick={handleClose}>
+                                        Close</Button>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Container>
+      </Modal>
+
+                {/* modal 1 ends here */}
+
+            </Col>
 
            <Col className="my-5">
                 <Card border="primary" className="card">
