@@ -1,6 +1,14 @@
 // Bootstrap source Sass files import
 
 @import url("https://www.dafont.com/pricedown.font");
+@import "../node_modules/bootstrap/scss/functions";
+
+$primary: royalblue ;
+$warning: gold ;
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
 
 h3{
     font-family:"pricedown";
@@ -9,6 +17,15 @@ h3{
     width: 35rem;
 }
 
+.qty-bar{
+    width: 5em;
+    border: none;
+}
+
+.modal-position{
+    display: grid;
+    place-items: center;
+}
 .card{ 
    width: 25em;
 }

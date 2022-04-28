@@ -1,9 +1,9 @@
-[
+export const product = [
     {
         "id": 1,
-        "name": "Blue Girl",
-        "image": "images/BlueGirlFINAL.jpg",
-        "price": 17.99,
+        "name": "Pastel Bird",
+        "image": "/public/bird.jpg",
+        "price": 34.99,
         "shipPrice": 4.99
     },
     {

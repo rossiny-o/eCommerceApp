@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import '../Main.scss';
-import { Header } from "./HeaderComponent";
-import {Container, Row, Col, Card, Modal, Button} from "react-bootstrap";
+import {Container, Row, Col, Card, Modal, Button, Carousel} from "react-bootstrap";
 import {Star, StarFill, StarHalf, SuitHeartFill} from "react-bootstrap-icons";
-
+import { product1 } from '../Product';
 
 
 export function Product (){
@@ -15,7 +14,7 @@ export function Product (){
     
 
     return (
-    <Container className="m-4 p-4" fluid>
+    <Container className="m-4 p-4">
         
          {/* 1st row */}
 
@@ -26,15 +25,15 @@ export function Product (){
 
                     <Card className=" mb-1 p-5 pb-1 border-0 border-bottom rounded-5 shadow" onClick={handleShow} >
 
-                  <Card.Img className="p-3 mx-auto img-thumbnail bg-warning border-0 border-bottom rounded rounded-3  shadow" variant="top" src="bird.jpg" alt="Bird Drawing"/>
+                  <Card.Img className="p-3 mx-auto img-thumbnail bg-warning border-0 border-bottom rounded rounded-3  shadow" variant="top" src={product1.image} alt="Bird Drawing"/>
 
-                  <Card.Body className="card-body mt-2 me-3 px-3 py-4">
+                  <Card.Body className="mt-2 me-3 px-3 py-4">
 
                         {/* <div className=" heart-icon float-end"><SuitHeartFill className="text-danger" size={30} /></div> */}
 
                         <div className="text-center">
-                            <Card.Title as="h3" className="text-primary text-uppercase font-monaco fw-bolder mt-3 ">Pastel Bird</Card.Title>
-                            <Card.Subtitle as="h5" className="text-muted fst-italic" >by Jennifer Miranda</Card.Subtitle>
+                            <Card.Title as="h3" className="text-primary text-uppercase font-monaco fw-bolder mt-3 ">{product1.name}</Card.Title>
+                            <Card.Subtitle as="h5" className="text-muted fst-italic" >by {product1.artist_name}</Card.Subtitle>
                         </div>
 
                         <div className="star-icons text-warning text-center my-2">
@@ -45,7 +44,7 @@ export function Product (){
                             <Star className="mx-1" size={30}/>
                         </div>
 
-                        <Card.Text as="h2" className=" fst-italic font-monaco text-center text-primary pb-3">$ 49.99</Card.Text>
+                        <Card.Text as="h2" className=" fst-italic font-monaco text-center text-primary pb-3">$ {product1.price}</Card.Text>
 
                   </Card.Body>
 
@@ -55,57 +54,67 @@ export function Product (){
 
                 {/* modal 1 starts here */}
 
-                <Modal show={show} fullscreen onHide={handleClose}>
-            
-                    
+                <Modal show={show} size="xl" className="modal-position" onHide={handleClose}>
+                            <Modal.Header  closeButton className="border-0 pe-4 pt-4">
 
-                        <Container className="m-5 p-5">
+                            </Modal.Header>
+                            <Modal.Body>
+                                <Container  className="p-4">
+                                <Row>
 
-                            <Modal.Header fluid><Header /></Modal.Header>
 
-                            <Row className="d-flex mx-auto p-5">
-                            
-                                <Col className="p-2">
+                                 <Col className=" m-2 px-5 justify-content-center" md={5}>
+                                    <Carousel>
+                                        <Carousel.Item>
+                                            <img className="p-3 mx-auto img-thumbnail bg-warning border-0 border-bottom rounded rounded-3  shadow" src="bird.jpg"  width={500} alt="Bird Drawing" />
+                                        </Carousel.Item>
+                                
+                                        <Carousel.Item>
+                                        <img className=" mx-auto img-thumbnail   shadow" src="bird(wall).jpg" alt="Bird Drawing" width={500} />
+                                        </Carousel.Item>
 
-                                    <img className=" mx-auto img-thumbnail bg-warning border-0 border-bottom rounded rounded-3  shadow" src="bird.jpg" alt="Bird Drawing" />
+                                        <Carousel.Item>
+                                         <img className=" mx-auto img-thumbnail border-0 border-bottom rounded rounded-3  shadow" src="bird.jpg" alt="Bird Drawing" width={500} />
+                                        </Carousel.Item>
+
+                                    </Carousel>
                                     
                                 </Col>
 
         
 
-                                <Col bg="secondary" gap={2} className="pe-3">
-                                    <h1 className="text-primary text-uppercase text-start font-monaco display-2">Pastel Bird</h1>
+                                <Col className="pe-3 justify-content-center">
+                                    <h3 className="text-primary text-uppercase font-monaco fw-bolder display-6 mt-3 ">{product1.name}</h3>
 
                                     <div className="star-icons text-warning text-start my-2">
-                                        <StarFill className="mx-1" size={40}/>
-                                        <StarFill className="mx-1" size={40}/>
-                                        <StarFill className="mx-1" size={40}/>
-                                        <StarHalf className="mx-1" size={40}/>
-                                        <Star className="mx-1" size={40}/>
+                                        <StarFill className="mx-1" size={25}/>
+                                        <StarFill className="mx-1" size={25}/>
+                                        <StarFill className="mx-1" size={25}/>
+                                        <StarHalf className="mx-1" size={25}/>
+                                        <Star className="mx-1" size={25}/>
                                     </div>
 
-                                    <h5 className="text-muted fst-italic text-start">by Jennifer Miranda</h5>
-                                    <h4 className="fs-4 text-start">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
-                                    </h4>
+                                    <h6 className="text-muted fst-italic text-start">by {product1.artist_name}</h6>
+                                    <h4 className="fs-5 text-start">{product1.description}</h4>
 
                                     <div className="py-2">
-                                    <h1 className=" d-flex fst-italic display-5 font-monaco text-primary text-start float-start">$ 49.99</h1>
+                                    <h2 className=" d-flex fst-italic  font-monaco text-primary float-start">$ {product1.price}</h2>
 
                                     <label className="d-flex float-end ">
                                         <h5 className="pe-3" >Qty: </h5>
-                                     <input width={10} className="fs-3 text-start border-0"                                 type="number"></input>
+                                     <input placeholder="1" className="fs-3 ps-2 text-start border-0 qty-bar"                                 type="number"></input>
                                     </label>
                                     </div>
 
-                                    <div className="pt-3 d-inline-flex float-start">
-                                    <Button pill className="mx-3 p-4 text-uppercase" size="lg" variant="warning">ADD TO CART</Button>
-                                    <Button pill className="mx-3 p-4 text-uppercase" size="lg" variant="secondary" onClick={handleClose}>
+                                    <div className="my-5 d-inline-flex float-end">
+                                    <Button className="mx-3 p-3 text-uppercase text-wrap" size="md" variant="warning">ADD TO CART</Button>
+                                    <Button className="mx-3 p-3 text-uppercase" size="md" variant="outline-danger" onClick={handleClose}>
                                         Close</Button>
                                     </div>
                                 </Col>
                             </Row>
-                        </Container>
+                    </Container>
+            </Modal.Body>            
       </Modal>
 
                 {/* modal 1 ends here */}

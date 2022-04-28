@@ -1,15 +1,26 @@
 import './Main.scss';
-import './products.json';
+import './products.js';
 import { Header } from './components/HeaderComponent';
 import {Product} from './components/CardComponent';
+import {product1} from './Product';
 
 
 function Main() {
  return (
-   <body>
+   <div>
+    
     <Header className="mb-2 pb-2" />
+
+    <div> 
+      
+      Json Render: {product1.description}
+      
+    
+    </div>
     <Product />
-  </body>
+
+    
+  </div>
   );
 }
 
