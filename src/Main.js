@@ -1,26 +1,17 @@
-import './Main.scss';
-import './products.js';
-import { Header } from './components/HeaderComponent';
-import {Product} from './components/CardComponent';
-import {product1} from './Product';
-
+import React from "react";
+import "./Main.css";
+import { Routes, Route } from "react-router-dom";
+import { Header } from "./components/Header";
+import { ProductPage } from "./pages/ProductPage";
 
 function Main() {
- return (
-   <div>
-    
-    <Header className="mb-2 pb-2" />
-
-    <div> 
-      
-      Json Render: {product1.description}
-      
-    
+  return (
+    <div>
+      <Header className="mb-5 pb-2" />
+      <Routes>
+        <Route path="/product" element={<ProductPage />} />
+      </Routes>
     </div>
-    <Product />
-
-    
-  </div>
   );
 }
 
