@@ -1,48 +1,107 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import {
   CardElephantGrave,
   CardHomelessBird,
   CardPastelBird,
+  CardElephantHorns,
+  CardElephlower,
+  CardFacialFeatures,
+  CardThinkingThinker,
+  CardHamster,
+  CardGallopingHorse,
+  CardVforVendetta,
+  CardSheepinWolfClothing,
+  CardFlowerFox
 } from "../components/Cards";
-import { PastelBird } from "../pages/PastelBird";
-import { HomelessBird } from "../pages/HomelessBird";
-import { ElephantGrave } from "../pages/ElephantGrave";
-
+import { Header } from "../components/Header";
 
 export function ProductPage() {
   return (
     <div>
-      <Container >
+      <Header className="mb-5 pb-2" />
+      <Container>
         
-        <Row className="mx-3 my-5">
-          <Col xl={4} sm={6} gap={8}>
+        <Row className="m-4">
+          <Col>
             <Link className="text-decoration-none" to="/product/pastelbird">
               <CardPastelBird />
             </Link>
           </Col>
-          <Col xl={4} sm={6}>
+          <Col>
             <Link className="text-decoration-none" to="/product/homelessbird">
             <CardHomelessBird />
             </Link>
           </Col>
-          <Col xl={4} sm={6}>
+          <Col>
             <Link className="text-decoration-none" to="/product/elephantgrave">
-            <CardElephantGrave />
+            <CardElephantGrave/>
+            </Link>
+          </Col>
+          <Col>
+            <Link className="text-decoration-none" to="/product/elephanthorns">
+            <CardElephantHorns/>
             </Link>
           </Col>
         </Row>
+
+        <Row className="m-4">
+          <Col>
+            <Link className="text-decoration-none" to='/product/elephlower'>
+              <CardElephlower />
+            </Link>
+          </Col>
+
+          <Col>
+            <Link className="text-decoration-none" to='/product/facialfeatures'>
+              <CardFacialFeatures />
+            </Link>
+          </Col>
+
+          <Col>
+            <Link className="text-decoration-none" to='/product/thinkingthinker'>
+              <CardThinkingThinker />
+            </Link>
+          </Col>
+
+          <Col>
+            <Link className="text-decoration-none" to='/product/hamster'>
+              <CardHamster />
+            </Link>
+          </Col>
+          
+        </Row>
+
+        <Row className="m-4">
+          <Col>
+            <Link className="text-decoration-none" to='/product/gallopinghorse'>
+              <CardGallopingHorse />
+            </Link>
+          </Col>
+
+          <Col>
+            <Link className="text-decoration-none" to='/product/vforvendetta'>
+              <CardVforVendetta />
+            </Link>
+          </Col>
+
+          <Col>
+            <Link className="text-decoration-none" to='/product/sheepinwolfclothing'>
+                <CardSheepinWolfClothing />
+            </Link>
+          </Col>
+
+          <Col>
+            <Link className="text-decoration-none" to='/product/flowerfox'>
+              <CardFlowerFox />
+            </Link>
+          </Col>
+          
+        </Row>
       </Container>
 
-      <Routes>
-
-        <Route path="/product" element={<ProductPage/>} />
-        <Route path="/product/pastelbird" element={<PastelBird/>}/>
-        <Route path="/product/homelessbird" element={<HomelessBird/>}/>
-        <Route path="/product/elephantgrave" element={<ElephantGrave/>}/>
-         
-      </Routes>
+     
     </div>
   );
 }

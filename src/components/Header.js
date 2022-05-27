@@ -1,13 +1,12 @@
 import React from "react";
-import "../Main.scss";
-import { Nav, Navbar, Container, Button } from "react-bootstrap";
-import { Link, Routes, Route } from "react-router-dom";
-import { Login } from "../pages/login";
+import "../scss/Main.scss";
+import {Navbar, Container, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { Search, Cart, PersonCircle } from "react-bootstrap-icons";
 
 export function Header() {
   return (
-    <Navbar sticky="top" className=" py-3" bg="primary">
+    <Navbar sticky="top" variant="dark" className="py-2" bg="primary" expand="lg">
       <Container>
         <Navbar.Brand
           href="/"
@@ -16,34 +15,32 @@ export function Header() {
           ByDesgn
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar" />
-        <Navbar.Collapse id="navbar">
+        <Navbar.Collapse id="navbar" className="mx-3 mt-1 d-sm-inline-flex align-items-center">
           <label className="d-flex mx-auto">
             <input
               type="search"
-              className="searchbar p-3"
-              placeholder="Search Item..."
+              className="searchbar px-3"
+              placeholder="Search..."
             />
             <Button className="btn btn-lg px-4" variant="warning">
               <Search/>
             </Button>
           </label>
-          <Nav className=" mx-5 text-nowrap d-flex text-end">
+          
             <Link  to="/login">
-              <PersonCircle className="mx-3 display-5 text-warning" />
+              <PersonCircle className="ms-3 me-1 fs-2 text-warning" />
+              <a href="/login" className="text-warning d-lg-none">Login</a>
             </Link>
 
             <Link to="/cart">
-              <Cart className="mx-3 display-5 text-warning" />
+              <Cart className="ms-3 me-1 fs-2 text-warning" />
+              <a href="/cart" className="text-warning d-lg-none">Cart</a>
+
             </Link>
-          </Nav>
+         
         </Navbar.Collapse>
       </Container>
 
-      {/* routes */}
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
     </Navbar>
   );
 }

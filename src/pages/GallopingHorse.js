@@ -2,10 +2,10 @@
 import React, {useState} from "react";
 import "../css/Main.css";
 import { Container, Row, Col, Button, Carousel } from "react-bootstrap";
-import { product3 } from "../product-Info";
+import { product9 } from "../product-Info";
 import { Header } from "../components/Header";
 
-export function ElephantGrave() {
+export function GallopingHorse() {
 
   const [index, setIndex] = useState(0);
 
@@ -24,7 +24,7 @@ export function ElephantGrave() {
 
               <Carousel.Item className="d-flex justify-content-center">
                 <img className="bg-warning p-2"
-                  src={product3.image}
+                  src={product9.image}
                   width={400}
                   alt="Bird Drawing 1"
                 />
@@ -32,7 +32,7 @@ export function ElephantGrave() {
 
               <Carousel.Item className="d-flex justify-content-center">
                 <img className="bg-warning p-2"
-                  src={product3.image2}
+                  src={product9.image2}
                   alt="Bird Drawing 2"
                   width={400}
                 />
@@ -47,17 +47,17 @@ export function ElephantGrave() {
         "
           >
             <h3 className="text-primary text-uppercase font-monaco fw-bolder display-5 mt-3 ">
-              {product3.name}
+              {product9.name}
             </h3>
 
             <h6 className="text-muted fst-italic text-start">
-              by {product3.artist_name}
+              by {product9.artist_name}
             </h6>
-            <h6 className="text-start">{product3.description}</h6>
+            <h6 className="text-start">{product9.description}</h6>
 
             <div className="py-1">
               <h3 className=" d-flex fst-italic font-monaco text-primary float-end">
-                $ {product3.price}
+                $ {product9.price}
               </h3>
 
               <label className="d-flex float-end ">

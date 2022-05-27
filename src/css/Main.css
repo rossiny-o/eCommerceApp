@@ -1,0 +1,41 @@
+h3{
+    font-family:"pricedown";
+}
+.searchbar{
+    width: 35rem;
+}
+
+.btn-curved {
+    background-color: goldenrod;
+    border-radius: 2em;
+}
+
+
+.qty-bar{
+    width: 5em;
+    border: none;
+}
+
+
+
+
+.heart-icon{
+    display: float;
+    padding-left: 1em;
+}
+
+.heart-icon:hover{
+    transform: translateY(-10px);
+    transition: transform .2s;
+}
+
+.card-style{
+    width: 10rem;
+    
+}
+
+.card-style:hover{
+    transform: translateY(-5px);
+    transition: transform .4s;
+    
+}

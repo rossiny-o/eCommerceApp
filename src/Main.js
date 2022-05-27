@@ -1,16 +1,21 @@
 import React from "react";
-import "./Main.css";
-import { Routes, Route } from "react-router-dom";
-import { Header } from "./components/Header";
-import { ProductPage } from "./pages/ProductPage";
+import Products from "./components/Products";
+import "./css/Main.css";
+// import { ProductPage } from "./pages/ProductPage";
+import { productData } from "./data-info";
+import{ Header }from "./components/Header";
+
 
 function Main() {
+  const { products } = productData;
   return (
     <div>
-      <Header className="mb-5 pb-2" />
-      <Routes>
-        <Route path="/product" element={<ProductPage />} />
-      </Routes>
+      <Header/>
+      {/* <ProductPage /> */}
+
+      <div>
+        <Products products={products}></Products>
+      </div>
     </div>
   );
 }
