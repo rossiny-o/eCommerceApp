@@ -22,8 +22,10 @@ export function ProductPage() {
     <div>
       <Header className="mb-5 pb-2" />
       <Container>
+
+        <h1 className="display-5 text-primary m-3 mb-5 fw-bold">Products</h1>
         
-        <Row className="m-4">
+        <Row className="m-3">
           <Col>
             <Link className="text-decoration-none" to="/product/pastelbird">
               <CardPastelBird />

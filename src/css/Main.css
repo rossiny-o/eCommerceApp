@@ -35,7 +35,7 @@ h3{
 }
 
 .card-style:hover{
-    transform: translateY(-5px);
+    transform: translateY(-20px);
     transition: transform .4s;
     
 }

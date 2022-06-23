@@ -1,66 +1,83 @@
-import React, {useState} from "react";
-import "../css/Main.css";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button, Carousel } from "react-bootstrap";
-import { product1 } from "../product-Info";
-import {productData} from "../data-info";
-import { Header } from "../components/Header";
-import {useCart} from 'react-use-cart';
+import { ArrowLeft } from "react-bootstrap-icons";
+import { Footer } from "./Footer";
+import { Header } from "./Header";
+import { Link } from "react-router-dom";
+import {useCart}from "react-use-cart";
 
-export function PastelBird() {
 
-  const { addItem } = useCart();
-  const {products} = productData;
+export default function ItemPage(props) {
+  const { product } = props;
   const [index, setIndex] = useState(0);
-
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
 
+
+  const {addItem} = useCart();
+
+
+  // this code below starts a page from the top
+  useEffect(() => window.scroll(0, 0), []);
+
   return (
-    <div>
-      <Header/>
+    <>
+      <Header />
+
       <Container>
         <Row>
+          <Link
+            to="/"
+            className="text-decoration-none d-flex mt-5"
+          >
+            <ArrowLeft className="mx-2" /><h6>Back</h6>
+          </Link>
+        </Row>
+        <Row>
           <Col className="mt-5 mx-auto d-flex align-items-center">
-
-            <Carousel activeIndex={index} onSelect={handleSelect} variant="dark" fade>
-
+            <Carousel
+              activeIndex={index}
+              onSelect={handleSelect}
+              variant="dark"
+              fade
+            >
               <Carousel.Item className="d-flex justify-content-center">
-                <img className="bg-warning p-2"
-                  src={product1.image}
+                <img
+                  className="bg-warning p-2"
+                  src={product.image}
                   width={400}
                   alt="Bird Drawing 1"
                 />
               </Carousel.Item>
 
               <Carousel.Item className="d-flex justify-content-center">
-                <img className="bg-warning p-2"
-                  src={product1.image2}
+                <img
+                  className="bg-warning p-2"
+                  src={product.image2}
                   alt="Bird Drawing 2"
                   width={400}
                 />
               </Carousel.Item>
-
             </Carousel>
-
           </Col>
 
           <Col
             className="m-4 px-5
-        "
+    "
           >
             <h3 className="text-primary text-uppercase font-monaco fw-bolder display-5 mt-3 ">
-              {product1.name}
+              {product.name}
             </h3>
 
             <h6 className="text-muted fst-italic text-start">
-              by {product1.artist_name}
+              by {product.artist_name}
             </h6>
-            <h6 className="text-start">{product1.description}</h6>
+            <h6 className="text-start">{product.description}</h6>
 
             <div className="py-1">
               <h3 className=" d-flex fst-italic font-monaco text-primary float-end">
-                $ {product1.price}
+                $ {product.price}
               </h3>
 
               <label className="d-flex float-end ">
@@ -74,7 +91,7 @@ export function PastelBird() {
             </div>
 
             <div className="my-5 d-flex justify-content-end">
-            <Button
+              <Button
                 className="me-1 px-4 py-2 rounded-pill fs-6 text-uppercase text-nowrap"
                 size="md"
                 variant="primary"
@@ -83,19 +100,23 @@ export function PastelBird() {
               </Button>
 
               {/* make modal for buy now button */}
+
+              
               <Button
                 className="ms-1 px-4 py-2 rounded-pill fs-6 text-uppercase text-nowrap"
                 size="md"
                 variant="warning"
-                onClick={() => addItem(products.id) }
+                id={product.id}
+                onClick={() => addItem(product)}
               >
                 ADD TO CART
               </Button>
-            {/* add to cart takes the product item and the value of its quantity field multiplied by the price and adds it to cart page  */}
+              {/* add to cart takes the product item and the value of its quantity field multiplied by the price and adds it to cart page  */}
             </div>
           </Col>
         </Row>
       </Container>
-    </div>
+      <Footer />
+    </>
   );
 }

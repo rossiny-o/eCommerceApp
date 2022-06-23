@@ -1,7 +1,12 @@
+
+
+
+
 export const productData = {
   products: [
     {
-      id: "1",
+      id: 1,
+      name_id: "pastelbird",
       name: "Pastel Bird",
       artist_name: "ThatOneCapArtist",
       description:
@@ -12,7 +17,8 @@ export const productData = {
       shipPrice: 4.99,
     },
     {
-      id: "2",
+      id: 2,
+      name_id: "homelessbird",
       name: "Homeless Bird",
       artist_name: "ThatOneCapArtist",
       description:
@@ -23,7 +29,8 @@ export const productData = {
       shipPrice: 4.99,
     },
     {
-      id: "3",
+      id: 3,
+      name_id: "elephantgraveyard",
       name: "Elephant Graveyard",
       artist_name: "ThatOneCapArtist",
       description:
@@ -34,7 +41,8 @@ export const productData = {
       shipPrice: 4.99,
     },
     {
-      id: "4",
+      id: 4,
+      name_id: "elephanthorns",
       name: "Elephant Horns",
       artist_name: "ThatOneCapArtist",
       description:
@@ -45,7 +53,8 @@ export const productData = {
       shipPrice: 4.99,
     },
     {
-      id: "5",
+      id: 5,
+      name_id: "elephlower",
       name: "Elephlower",
       artist_name: "ThatOneCapArtist",
       description:
@@ -56,7 +65,8 @@ export const productData = {
       shipPrice: 4.99,
     },
     {
-      id: "6",
+      id: 6,
+      name_id: "facialfeatures",
       name: "Facial Features",
       artist_name: "ThatOneCapArtist",
       description:
@@ -67,7 +77,8 @@ export const productData = {
       shipPrice: 4.99,
     },
     {
-      id: "7",
+      id: 7,
+      name_id: "thinkingthinker",
       name: "Thinking Thinker",
       artist_name: "ThatOneCapArtist",
       description:
@@ -78,7 +89,8 @@ export const productData = {
       shipPrice: 4.99,
     },
     {
-      id: "8",
+      id: 8,
+      name_id: "hamster",
       name: "Hamster",
       artist_name: "ThatOneCapArtist",
       description:
@@ -89,7 +101,8 @@ export const productData = {
       shipPrice: 4.99,
     },
     {
-      id: "9",
+      id: 9,
+      id_name: "gallopinghorse",
       name: "Galloping Horse",
       artist_name: "ThatOneCapArtist",
       description:
@@ -100,7 +113,8 @@ export const productData = {
       shipPrice: 4.99,
     },
     {
-      id: "10",
+      id: 10,
+      name_id: "vforvendetta",
       name: "V For Vendetta",
       artist_name: "ThatOneCapArtist",
       description:
@@ -111,7 +125,8 @@ export const productData = {
       shipPrice: 4.99,
     },
     {
-      id: "11",
+      id: 11,
+      name_id: "sheepinwolfsclothing",
       name: "Sheep In Wolf's Clothing",
       artist_name: "ThatOneCapArtist",
       description:
@@ -122,7 +137,8 @@ export const productData = {
       shipPrice: 4.99,
     },
     {
-      id: "12",
+      id: 12,
+      name_id: "flowerfox",
       name: "Flower Fox",
       artist_name: "ThatOneCapArtist",
       description:

@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/Main.css";
+import "../scss/Main.scss";
 import {Card } from "react-bootstrap";
 import { Star, StarFill, StarHalf} from "react-bootstrap-icons";
 import {
@@ -17,11 +17,13 @@ import {
   product12,
 } from "../product-Info";
 
+
+
 export function CardPastelBird() {
   return (
     <Card
-      style={{ width: "18rem" }}
-      className="card-style p-4 pb- border-0 border-bottom rounded-5 shadow"
+      style={{ width: "15rem" }}
+      className="card-style p-4 border-0 border-bottom rounded-5 shadow"
     >
       <img
         className="p-3 mx-auto img-thumbnail bg-warning border-0 border-bottom rounded rounded-3  shadow"
@@ -61,7 +63,7 @@ export function CardPastelBird() {
 export function CardHomelessBird() {
   return (
     <Card
-      style={{ width: "18rem" }}
+      style={{ width: "15rem" }}
       className="card-style p-4 pb- border-0 border-bottom rounded-5 shadow"
     >
       <img
@@ -102,7 +104,7 @@ export function CardHomelessBird() {
 export function CardElephantGrave() {
   return (
     <Card
-      style={{ width: "18rem" }}
+      style={{ width: "15rem" }}
       className="card-style p-4 pb- border-0 border-bottom rounded-5 shadow"
     >
       <img
@@ -116,7 +118,7 @@ export function CardElephantGrave() {
         {/* <div className=" heart-icon float-end"><SuitHeartFill className="text-danger" size={30} /></div> */}
 
         <div className="font-monaco text-center text-nowrap">
-          <Card.Title className="pt-2 fs-5 text-primary text-uppercase fw-bolder">
+          <Card.Title className="pt-2 fs-5 text-primary text-center text-uppercase text-wrap fw-bolder">
             {product3.name}
           </Card.Title>
           <Card.Subtitle className="fs-6 text-muted fst-italic">
@@ -143,7 +145,7 @@ export function CardElephantGrave() {
 export function CardElephantHorns() {
   return (
     <Card
-      style={{ width: "18rem" }}
+      style={{ width: "15rem" }}
       className="card-style p-4 pb- border-0 border-bottom rounded-5 shadow"
     >
       <img
@@ -184,7 +186,7 @@ export function CardElephantHorns() {
 export function CardElephlower() {
   return (
     <Card
-      style={{ width: "18rem" }}
+      style={{ width: "15rem" }}
       className="card-style p-4 pb- border-0 border-bottom rounded-5 shadow"
     >
       <img
@@ -226,7 +228,7 @@ export function CardElephlower() {
 export function CardFacialFeatures() {
   return (
     <Card
-      style={{ width: "18rem" }}
+      style={{ width: "15rem" }}
       className="card-style p-4 pb- border-0 border-bottom rounded-5 shadow"
     >
       <img
@@ -268,8 +270,8 @@ export function CardFacialFeatures() {
 export function CardThinkingThinker() {
   return (
     <Card
-      style={{ width: "18rem" }}
-      className="card-style p-4 pb- border-0 border-bottom rounded-5 shadow"
+      style={{ width: "15rem" }}
+      className="card-style p-2 pb- border-0 border-bottom rounded-5 shadow"
     >
       <img
         className="p-3 mx-auto img-thumbnail bg-warning border-0 border-bottom rounded rounded-3  shadow"
@@ -283,7 +285,7 @@ export function CardThinkingThinker() {
         {/* <div className=" heart-icon float-end"><SuitHeartFill className="text-danger" size={30} /></div> */}
 
         <div className="font-monaco text-center text-nowrap">
-          <Card.Title className="pt-2 fs-5 text-primary text-uppercase fw-bolder">
+          <Card.Title className="pt-2 fs-5 text-primary text-uppercase text-wrap fw-bolder">
             {product7.name}
           </Card.Title>
           <Card.Subtitle className="fs-6 text-muted fst-italic">
@@ -310,7 +312,7 @@ export function CardThinkingThinker() {
 export function CardHamster() {
   return (
     <Card
-      style={{ width: "18rem" }}
+      style={{ width: "15rem" }}
       className="card-style p-4 pb- border-0 border-bottom rounded-5 shadow"
     >
       <img
@@ -352,7 +354,7 @@ export function CardHamster() {
 export function CardGallopingHorse() {
   return (
     <Card
-      style={{ width: "18rem" }}
+      style={{ width: "15rem" }}
       className="card-style p-4 pb- border-0 border-bottom rounded-5 shadow"
     >
       <img
@@ -394,7 +396,7 @@ export function CardGallopingHorse() {
 export function CardVforVendetta() {
   return (
     <Card
-      style={{ width: "18rem" }}
+      style={{ width: "15rem" }}
       className="card-style p-4 pb- border-0 border-bottom rounded-5 shadow"
     >
       <img
@@ -436,7 +438,7 @@ export function CardVforVendetta() {
 export function CardSheepinWolfClothing() {
   return (
     <Card
-      style={{ width: "18rem" }}
+      style={{ width: "15rem" }}
       className="card-style p-4 pb- border-0 border-bottom rounded-5 shadow"
     >
       <img
@@ -478,7 +480,7 @@ export function CardSheepinWolfClothing() {
 export function CardFlowerFox() {
   return (
     <Card
-      style={{ width: "18rem" }}
+      style={{ width: "15rem" }}
       className="card-style p-4 pb- border-0 border-bottom rounded-5 shadow"
     >
       <img

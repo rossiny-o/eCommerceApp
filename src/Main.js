@@ -1,22 +1,30 @@
 import React from "react";
-import Products from "./components/Products";
 import "./css/Main.css";
 // import { ProductPage } from "./pages/ProductPage";
+import Products from "./components/Products";
+// import { productData } from "./data-info";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 import { productData } from "./data-info";
-import{ Header }from "./components/Header";
+import { Container, Row } from "react-bootstrap";
 
 
 function Main() {
-  const { products } = productData;
+  // const [cartItems, setCartItems] = useState([]);
+  const {products} = productData;
   return (
-    <div>
-      <Header/>
-      {/* <ProductPage /> */}
+   <>
+        <Header />
+        
+         <Container>
+          <Row>
+            <Products products={products} key={products.id}/>
+          </Row>
+          </Container>
 
-      <div>
-        <Products products={products}></Products>
-      </div>
-    </div>
+        {/* footer */}
+        <Footer />
+  </>
   );
 }
 

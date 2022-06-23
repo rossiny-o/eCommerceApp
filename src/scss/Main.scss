@@ -3,9 +3,6 @@ $primary: #09365d;
 
 @import "./node_modules/bootstrap/scss/bootstrap";
 
-
-
-
 h3{
     font-family:"pricedown";
 }
@@ -24,9 +21,9 @@ h3{
     border: none;
 }
 .card-syle{
-    aspect-ratio: 16/9;
+    margin: auto;
 }
-.card-stle:hover{
+.card-style:hover{
     transform: translateY(-5px);
     transition: transform .4s;
     
@@ -47,4 +44,13 @@ h3{
     display: flex;
     flex-wrap: nowrap;
 }
+.cart-with-0{
+    height: 500px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
 
+.cart-img{
+    height: 6rem ;
+}
